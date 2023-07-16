@@ -1,96 +1,119 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Spotify Music Player</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="banner">
-        <div class="left-banner">
-            <img class="left-img" src="images/image.png" alt="left-banner-img">
-        <h1> Deep Focus</h1>
-        <p> Keep your focus and enjoy the serenity</p>
-        </div>
+      <div class="left-banner">
+        <img class="left-img" src="images/image.png" alt="left-banner-img" />
+        <h1>Deep Focus</h1>
+        <p>Keep your focus and enjoy the serenity</p>
+      </div>
     </div>
     <div class="main-section">
-        <div class="controls" onclick="playaudio()" id="play-pause"><img  class="play-button"src="images/play-button.svg" alt="play-image"></div>
-        <audio id="song"></audio>
-        <table>
-            <thead>
-                <th>#</th>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Duration</th>
-            </thead>
-            <tr>
-                <td>1</td>
-                <td>Fall into Me</td>
-                <td>Forest Blakk</td>
-                <td>03:46</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>God's Plan</td>
-                <td>Drake</td>
-                <td>03:18</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Shivers</td>
-                <td>Ed Sheeran</td>
-                <td>03:27</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Resuce Me</td>
-                <td>OneRepublic</td>
-                <td>02:38</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Senorita</td>
-                <td>Shawn Mendes and Camilla Cabello</td>
-                <td>03:26</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Treat you better</td>
-                <td>Shawn Mendes</td>
-                <td>03:21</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Daylight</td>
-                <td>David Kushner</td>
-                <td>03:36</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>2002</td>
-                <td>Anne-Marie</td>
-                <td>03:06</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>All of Me</td>
-                <td>John Legend</td>
-                <td>04:29</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Anti-Hero</td>
-                <td>Taylor Swift</td>
-                <td>03:20</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>Wish you the best</td>
-                <td> Lewis Capaldi</td>
-                <td>03::30</td>
-            </tr>
-        </table>
+      <div class="controls" onclick="playall()">
+        <img
+          class="play-button"
+          src="images/play-button.svg"
+          alt="play-image"
+        />
+      </div>
+      <audio id="song"></audio>
+      <table>
+        <thead>
+          <th>#</th>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Duration</th>
+        </thead>
+        <tr onclick="audio1('fall-into-me')">
+          <td>1</td>
+          <td>Fall into Me</td>
+          <td>Forest Blakk</td>
+          <td>03:46</td>
+        </tr>
+        <tr onclick="audio1('gods-plan')">
+          <td>2</td>
+          <td>God's Plan</td>
+          <td>Drake</td>
+          <td>03:18</td>
+        </tr>
+        <tr onclick="audio1('shivers')">
+          <td>3</td>
+          <td>Shivers</td>
+          <td>Ed Sheeran</td>
+          <td>03:27</td>
+        </tr>
+        <tr onclick="audio1('rescue-me')">
+          <td>4</td>
+          <td>Rescue Me</td>
+          <td>OneRepublic</td>
+          <td>02:38</td>
+        </tr>
+        <tr onclick="audio1('senorita')">
+          <td>5</td>
+          <td>Senorita</td>
+          <td>Shawn Mendes and Camila Cabello</td>
+          <td>03:26</td>
+        </tr>
+        <tr onclick="audio1('treat-you-better')">
+          <td>6</td>
+          <td>Treat you better</td>
+          <td>Shawn Mendes</td>
+          <td>03:21</td>
+        </tr>
+        <tr onclick="audio1('daylight')">
+          <td>7</td>
+          <td>Daylight</td>
+          <td>David Kushner</td>
+          <td>03:36</td>
+        </tr>
+        <tr onclick="audio1('2002')">
+          <td>8</td>
+          <td>2002</td>
+          <td>Anne-Marie</td>
+          <td>03:06</td>
+        </tr>
+        <tr onclick="audio1('all-of-me')">
+          <td>9</td>
+          <td>All of Me</td>
+          <td>John Legend</td>
+          <td>04:29</td>
+        </tr>
+        <tr onclick="audio1('anti-Hero')">
+          <td>10</td>
+          <td>Anti-Hero</td>
+          <td>Taylor Swift</td>
+          <td>03:20</td>
+        </tr>
+        <tr onclick="audio1('wish-you-the-best')">
+          <td>11</td>
+          <td>Wish you the best</td>
+          <td>Lewis Capaldi</td>
+          <td>03:30</td>
+        </tr>
+      </table>
     </div>
+    <script>
+      function audio1(title) {
+        const audio = document.getElementById("song");
+        audio.src = `./music/${title}.mp3`;
+        audio.play();
+      }
+
+      function playall() {
+        const audioElements = document.querySelectorAll("tr");
+        console.log(audioElements);
+        audioElements.forEach(async (element) => {
+          await element.click();
+        });
+      }
+    </script>
     <script src="script.js"></script>
-</body>
+  </body>
+</html>
